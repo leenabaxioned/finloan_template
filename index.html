@@ -1,40 +1,521 @@
-<!doctype html>
+<!DOCTYPE html>
 <!-- If multi-language site, reconsider usage of html lang declaration here. -->
-<html lang="en"> 
-
-<head>
-  <meta charset="utf-8">
-  <title>Finloan Template</title>
-  <!-- View-port Basics: http://mzl.la/VYREaP -->
-  <!-- This meta tag is used for mobile device to display the page without any zooming,
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Finloan Template</title>
+    <!-- View-port Basics: http://mzl.la/VYREaP -->
+    <!-- This meta tag is used for mobile device to display the page without any zooming,
        so how much the device is able to fit on the screen is what's shown initially. 
        Remove comments from this tag, when you want to apply media queries to the website. -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
-  <link rel="shortcut icon" href="favicon.ico" />
-  <!--font-awesome link for icons-->
-  <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css" >
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
-  <link rel="stylesheet" media="screen" href="assets/css/style.css" >
-</head>
-<body>
-  <!--container start-->
-  <div class="container">
-    <!--header section start-->
-    <header>
-    </header>
-    <!--header section start-->
-    <!--main section start-->
-    <main>
-    </main>
-    <!--main section end-->
-    <!--footer section start-->
-    <footer>      
-    </footer>
-    <!--footer section end-->
-  </div>
-  <!--container end-->
-  <script src="assets/js/script.js"></script>
-</body>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!--font-awesome link for icons-->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/font-awesome/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Material Icon CDN -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
+    <link rel="stylesheet" media="screen" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!--container start-->
+    <div class="container">
+      <!--header section start-->
+      <header>
+        <h1 class="logo-heading">
+          <a class="homeicon" href="#FIXME" title="Logo">Finloans</a>
+        </h1>
+        <nav class="head-nav" id="navigation">
+          <ul class="nav-menu">
+            <li>
+              <a href="#FIXME" class="nav-link" title="Home">Home</a>
+            </li>
+            <li>
+              <a href="#FIXME" class="nav-link" title="Loan">Loan</a>
+            </li>
+            <li>
+              <a href="#FIXME" class="nav-link" title="About">About</a>
+            </li>
+            <li>
+              <div class="dropdown pages">
+                <a href="#FIXME" class="nav-link dropbtn" title="Pages"
+                  >Pages</a
+                >
+                <div class="dropdown-content">
+                  <a href="#FIXME" title="Link1">Link 1</a>
+                  <a href="#FIXME" title="Link2">Link 2</a>
+                  <a href="#FIXME" title="Link3">Link 3</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown blog">
+                <a href="#FIXME" class="nav-link dropbtn" title="Blog">Blog</a>
+                <div class="dropdown-content">
+                  <a href="#FIXME" title="Link1">Link 1</a>
+                  <a href="#FIXME" title="Link2">Link 2</a>
+                  <a href="#FIXME" title="Link3">Link 3</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#FIXME" class="nav-link" title="FAQ">FAQ</a>
+            </li>
+            <li>
+              <a href="#FIXME" class="nav-link" title="Contact">Contact</a>
+            </li>
+          </ul>
+          <button class="hamburger">
+            <!-- material icons https://material.io/resources/icons/ -->
+            <i class="menuIcon material-icons">menu</i>
+            <i class="closeIcon material-icons">close</i>
+          </button>
+        </nav>
+        <div class="contact-details">
+          <a
+            class="call"
+            href="tel:+10673567367"
+            title="Call Us"
+            target="_blank"
+            >+10 673 567 367</a
+          >
+          <a
+            class="applyloan btn"
+            href="#FIXME"
+            title="Apply for laon"
+            target="_blank"
+            >Apply for a loan</a
+          >
+        </div>
+        <div class="hamburger">
+          <span class="line line1">line1</span>
+          <span class="line line2">line2</span>
+          <span class="line line3">line3</span>
+        </div>
+      </header>
+      <!--header section start-->
+      <!--main section start-->
+      <main>
+        <!--banner section starts-->
+        <section class="banner">
+          <div class="banner-img">
+            <figure>
+              <img src="https://placehold.jp/1300x816.png" alt="banner-img" />
+            </figure>
+            <div class="banner-content wrapper">
+              <div class="banner-heading">
+                <h2>Get Loan for your Business growth or startup</h2>
+                <a class="howbtn btn" href="#FIXME" title="How it works"
+                  >How it works</a
+                >
+              </div>
+              <form action="javascript:void(0);">
+                <h3>How much do you want?</h3>
+                <p>We provide online instant cash laons with quick</p>
+                <div class="main-amount">
+                  <div class="amount">
+                    <input type="text" name="amount" placeholder="Amount" />
+                  </div>
+                  <div class="month">
+                    <input type="text" name="month" placeholder="Month" />
+                  </div>
+                </div>
+                <span class="pay">You have to pay: $0</span>
+                <button class="continue btn" type="button" title="Continue">
+                  Continue
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!--banner section ends-->
+        <!--offers section starts-->
+        <section class="offers">
+          <div class="wrapper">
+            <h3>What we offer for you</h3>
+            <p>
+              We provide online instant cash laons with quick approval that suit
+              your team
+            </p>
+            <ul class="loans">
+              <li class="loan-info">
+                <div class="loan-logo">
+                  <span class="homeloan">Home Loan</span>
+                  <h4>Home Loan</h4>
+                  <span>$3000-$10000</span>
+                </div>
+                <div class="loan-list">
+                  <ul>
+                    <li>Borrow - $350 over 3 months</li>
+                    <li>Interest rate -292% pa fixed</li>
+                    <li>Total amount payable - $525.12</li>
+                    <li>Representative - 1,286% APR</li>
+                  </ul>
+                  <a class="apply btn" href="#FIXME" title="Apply Now"
+                    >Apply Now</a
+                  >
+                </div>
+              </li>
+              <li class="loan-info">
+                <div class="loan-logo">
+                  <span class="carloan">Car Loan</span>
+                  <h4>Car Loan</h4>
+                  <span>$3000-$10000</span>
+                </div>
+                <div class="loan-list">
+                  <ul>
+                    <li>Borrow - $350 over 3 months</li>
+                    <li>Interest rate -292% pa fixed</li>
+                    <li>Total amount payable - $525.12</li>
+                    <li>Representative - 1,286% APR</li>
+                  </ul>
+                  <a class="apply btn" href="#FIXME" title="Apply Now"
+                    >Apply Now</a
+                  >
+                </div>
+              </li>
+              <li class="loan-info">
+                <div class="loan-logo">
+                  <span class="educationloan">Education Loan</span>
+                  <h4>Education Loan</h4>
+                  <span>$3000-$10000</span>
+                </div>
+                <div class="loan-list">
+                  <ul>
+                    <li>Borrow - $350 over 3 months</li>
+                    <li>Interest rate -292% pa fixed</li>
+                    <li>Total amount payable - $525.12</li>
+                    <li>Representative - 1,286% APR</li>
+                  </ul>
+                  <a class="apply btn" href="#FIXME" title="Apply Now"
+                    >Apply Now</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!--offers section ends-->
+        <!--whyus section starts-->
+        <section class="whyus">
+          <div class="wrapper">
+            <figure>
+              <img src="https://placehold.jp/675x601.png" alt="whyus-img" />
+            </figure>
+            <div class="whyus-content">
+              <h3>Why Choose Us?</h3>
+              <p>
+                Esteem spirit temper too say adieus who direct esteem. It
+                esteems luckily or picture placing drawing. Apartments
+                frequently or motionless on reasonable.
+              </p>
+              <ul class="whyus-features">
+                <li>Loans with quick approval.</li>
+                <li>Customize a loan based on the amount.</li>
+                <li>Good credit profile and you have built your loan.</li>
+                <li>We provide online instant cash loans.</li>
+              </ul>
+              <a class="about btn" href="#FIXME" title="About Us">About Us</a>
+            </div>
+          </div>
+        </section>
+        <!--whyus section ends-->
+        <!--howworks section starts-->
+        <section class="howworks">
+          <div class="wrapper">
+            <h3>How it works</h3>
+            <p>
+              We provide online instant cash loans with quick approval that suit
+              your term
+            </p>
+            <ul class="application-process">
+              <li class="loanprocess">
+                <span>01</span>
+                <h4>Apply for loan</h4>
+                <p>
+                  We will customize a loan based on the amount of cash your
+                  company need term
+                </p>
+              </li>
+              <li class="review">
+                <span>02</span>
+                <h4>Application review</h4>
+                <p>
+                  We will customize a loan based on the amount of cash your
+                  company need term
+                </p>
+              </li>
+              <li class="getfunding">
+                <span>03</span>
+                <h4>Get funding fast</h4>
+                <p>
+                  We will customize a loan based on the amount of cash your
+                  company need term
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!--howworks section ends-->
+        <!--frequentlyask section starts-->
+        <section class="frequentlyask">
+          <figure>
+            <img
+              src="https://placehold.jp/674x600.png"
+              alt="frequentlyask-img"
+            />
+          </figure>
+          <div class="frequentlyask-content">
+            <div class="wrapper">
+              <h3>Frequently ask</h3>
+              <ul class="frequentlyask-list">
+                <li class="accordion">
+                  <button class="uparrow">
+                    Adieus who direct esteem it esteems luckily?
+                  </button>
+                  <div class="accordion-content">
+                    <p>
+                      Esteem spirit temper too say adieus who direct esteem. It
+                      esteems luckily or picture placing drawing.
+                    </p>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="uparrow">Who direct esteem it esteems?</button>
+                  <div class="accordion-content">
+                    <p>
+                      Esteem spirit temper too say adieus who direct esteem. It
+                      esteems luckily or picture placing drawing.
+                    </p>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="uparrow">
+                    Duis consectetur feugiat auctor?
+                  </button>
+                  <div class="accordion-content">
+                    <p>
+                      Esteem spirit temper too say adieus who direct esteem. It
+                      esteems luckily or picture placing drawing.
+                    </p>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="uparrow">Consectetur feugiat auctor?</button>
+                  <div class="accordion-content">
+                    <p>
+                      Esteem spirit temper too say adieus who direct esteem. It
+                      esteems luckily or picture placing drawing.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!--frequentlyask section ends-->
+        <!--company-experience section starts-->
+        <section class="company-experience">
+          <div class="wrapper">
+            <div class="experience-section">
+              <figure>
+                <img
+                  src="https://placehold.jp/228x228.png"
+                  alt="userexperience-img"
+                />
+              </figure>
+              <div class="experience-content">
+                <p>
+                  "Working in conjunction with humanitarian aid agencies, we
+                  have supported programmes to help alleviate human suffering
+                  through animal welfare when people might depend on livestock
+                  as their only source of income or food.
+                </p>
+                <span>-Micky Mouse</span>
+              </div>
+              <div class="arrows">
+                <span class="left">greater than arrow</span>
+                <span class="right">less than arrow</span>
+              </div>
+            </div>
+            <div class="company-logos">
+              <figure>
+                <img
+                  src="https://placehold.jp/154x38.png"
+                  alt="company-logosoimg"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="https://placehold.jp/154x38.png"
+                  alt="company-logosoimg"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="https://placehold.jp/154x38.png"
+                  alt="company-logosoimg"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="https://placehold.jp/154x38.png"
+                  alt="company-logosoimg"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="https://placehold.jp/154x38.png"
+                  alt="company-logosoimg"
+                />
+              </figure>
+            </div>
+          </div>
+        </section>
+        <!--company-experience section ends-->
+        <!--applyforloan section starts-->
+        <section class="applyforloan">
+          <figure>
+            <img
+              src="https://placehold.jp/1400x377.png"
+              alt="applyforloan-img"
+            />
+          </figure>
+          <div class="applyforloan-content">
+            <h3>Apply for a Loan for your startup, education or company</h3>
+            <a class="applyloanbtn btn" href="#FIXME" title="Apply Now"
+              >Apply Now</a
+            >
+          </div>
+        </section>
+        <!--applyforloan section ends-->
+      </main>
+      <!--main section end-->
+      <!--footer section start-->
+      <footer>
+        <div class="wrapper">
+          <ul class="contact-details">
+            <li class="contact-info">
+              <h1 class="logo-heading">
+                <a class="homeicon" href="#FIXME" title="logo">Finloans</a>
+              </h1>
+              <!-- <h1><span>home</span>Finloans</h1> -->
+              <ul class="contacts">
+                <li>
+                  <a
+                    class="mail-to"
+                    href="mailto:finloan@support.com"
+                    title="Mail Us"
+                    >finloan@support.com</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="footercall"
+                    href="tel:+108736726782"
+                    title="Call Us"
+                    target="_blank"
+                    >+10 873 672 6782</a
+                  >
+                </li>
+                <li><address>600/D, Green road, NewYork</address></li>
+              </ul>
+              <ul class="footersocial-icons">
+                <li>
+                  <a
+                    href="#FIXME"
+                    class="footersocial facebook"
+                    title="Facebook"
+                    >Facebook</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#FIXME"
+                    class="footersocial googleplus"
+                    title="Google plus"
+                    >Google plus</a
+                  >
+                </li>
+                <li>
+                  <a href="#FIXME" class="footersocial twitter" title="Twitter"
+                    >Twitter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#FIXME"
+                    class="footersocial instagram"
+                    title="Instagram"
+                    >Instagram</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h4>Services</h4>
+              <ul class="service-list">
+                <li><a href="#FIXME" title="SEO">SEO/SEM</a></li>
+                <li><a href="#FIXME" title="Web design">Web design</a></li>
+                <li><a href="#FIXME" title="Ecommerce">Ecommerce</a></li>
+                <li>
+                  <a href="#FIXME" title="marketting">SDigital marketting</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h4>Useful Links</h4>
+              <ul class="service-list">
+                <li><a href="#FIXME" title="SEO">About</a></li>
+                <li><a href="#FIXME" title="Blog">Blog</a></li>
+                <li><a href="#FIXME" title="Contact">Contact</a></li>
+                <li><a href="#FIXME" title="Support">Support</a></li>
+              </ul>
+            </li>
+            <li>
+              <h4>Subscribe</h4>
+              <form>
+                <div class="email-id">
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your mail"
+                  />
+                  <button class="subscribe" type="submit">Subscribe</button>
+                </div>
+              </form>
+              <p class="esteem">
+                Esteem spirit temper too say adieus who direct esteem esteems
+                luckily.
+              </p>
+            </li>
+          </ul>
+          <p class="rights">
+            Copyright &copy;2021 All rights reserved|This template is made with
+            <span class="heartlogo">heart</span> by
+            <span class="colorlib">Colorlib</span>
+          </p>
+        </div>
+      </footer>
+      <!--footer section end-->
+    </div>
+    <!--container end-->
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
