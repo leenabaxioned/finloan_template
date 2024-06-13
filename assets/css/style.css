@@ -83,7 +83,8 @@ sub { bottom: -.25em; }
 /*for all*/
 body {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Gill Sans", sans-serif;
+  overflow: hidden;
 }
 
 a { 
@@ -96,16 +97,162 @@ li {
   list-style-type: none;
 }
 
+.btn {
+  padding: 15px 30px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: #33d4d6;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.btn:hover {
+  border: 1px solid #33d4d6;
+  background-color: #fff;
+  color: #33d4d6;
+} 
+
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 82%; 
   margin: 0 auto;
 }
+
+.homeicon:before,
+.icon::before { font-family: "FontAwesome"; }
 /*=================================
   Header styling starts here
 =================================*/
+header {
+  position: absolute;
+  top: 0;
+  left: 3%;
+  width: 94%;
+  margin: 20px auto;
+  z-index: 10;
+}
 
+header, 
+.nav-menu,
+header .contact-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .contact-details { gap: 10px; }
+
+header h1 { flex-basis: 17%; }
+.head-nav { flex-basis: 32%; }
+/* .dropdown-content { display: none; } */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content.show a {
+  float: none;
+  display: block;
+  padding: 10px 15px;
+  color: #707188;
+  font-size: 12px;
+  text-align: left;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.dropdown-content a:hover {
+  padding: 10px 15px;
+  background-color: #ddd;
+  color: #000;
+}
+
+.show { display: block; }
+
+.dropbtn {
+  font-family: "FontAwesome";
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.dropbtn::after { 
+  content: "\f107";
+  color: #808fa0;
+  text-indent: 0;
+}
+
+h1 a, .nav-menu li a , .call { 
+  color: #fff; 
+  font-size: 13px;
+}
+
+.nav-menu li a { 
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s; 
+}
+
+.nav-menu li a:hover { border-bottom: 1px solid #fff;}
+
+h1 a {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 20px;
+}
+
+h1 a:before {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  content: "\f015";
+  color: #fff;
+  background-color: #20B3E8;
+  font-size: 30px;
+  text-indent: 0;
+  line-height: 37px;
+  text-align: center;
+}
+
+.applyloan { 
+  padding: 12px 15px;
+  background-color: transparent;
+  color: #33D4D6;
+  border: 1px solid #33d4d6;
+  font-size: 12px;
+}
+
+.applyloan:hover {
+  background-color: #33D4D6;
+  color: #fff;
+}
+
+.call {
+  font-family: "FontAwesome";
+  display: flex;
+  justify-content: space-between
+}
+
+.call::before { 
+  padding: 0 5px;
+  content: "\f095";
+  color: #33d4d6;
+  font-size: 15px;
+  text-indent: 0;
+  transition: all 0.5s;
+}
+
+.call:hover { color: #33d4d6; }
+.hamburger { display: none; }
 /*=================================
   Header styling ends here
 =================================*/  
@@ -113,7 +260,464 @@ li {
 /*=================================
   main styling starts here
 =================================*/
+/* banner styling starts here */
+.banner-img { position: relative;}
 
+.banner-content {
+  position: absolute;
+  left: 10%;
+  bottom: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-heading { flex-basis: 45%; }
+
+.banner-heading h2 {
+  color: #fff;
+  font-size: 58px;
+  line-height: 1.4;
+}
+
+.banner-content form {
+  padding: 40px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #a199a2;
+  font-size: 17px;
+}
+
+.pay { display: block; }
+form h3,
+form p,
+form span,
+.pay { padding-bottom: 30px; }
+form h3,
+form p { text-align: center; }
+
+form h3 {
+  color: #0b1731;
+  font-size: 30px;
+}
+
+.continue { width: 100%; }
+
+.amount input,
+.month input {
+  width: 87%;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid #ececec;
+  font-size: 15px;
+}
+
+.amount,
+.month{
+  position: relative;
+  font-family: "FontAwesome";
+  }
+
+.amount::after,
+.month::after { 
+  position: absolute;
+  top: 30%;
+  right: 7%;
+  content: "\f0d7";
+  font-size: 15px;
+  text-indent: 0;
+}
+
+.main-amount {
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+/* banner styling ends here */
+
+/* loans styling starts  here */
+.offers .wrapper { margin: 0 auto; }
+.offers { margin: 100px auto; }
+
+.offers h3, 
+.offers p { text-align: center; }
+
+.offers h3::before {
+  position: absolute;
+  content: "";
+  width: 5%;
+  right: 47%;
+  top: -20%;
+  height: 3px;
+  margin: 0 auto;
+  background-color: #33D4D6;
+}
+
+.offers h3 { 
+  position: relative;
+  padding-bottom: 20px;
+  font-size: 45px; 
+}
+
+.offers p { 
+  color: #707188;
+  font-size: 15px;
+  font-weight: 600;
+ }
+
+.loans {
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loan-list,
+.loan-list ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.loan-list ul { gap: 10px; }
+.loan-list a { margin: 30px 0 10px 0; }
+
+.loan-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.loan-list li::before { 
+  font-family: "FontAwesome";
+  content: "\f111";
+  color: #33d4d6;
+  font-size: 10px;
+  text-indent: 0;
+}
+
+.loan-info { 
+  position: relative;
+  flex-basis: 25%;
+  padding: 40px 35px; 
+  border: 1px solid transparent;
+  background-color: #076fcb;
+  color: #fff;
+}
+
+.loan-logo { 
+  margin-bottom: 70px;
+  text-align: center; 
+}
+
+.loan-logo span:first-child {
+  font-family: "FontAwesome";
+  display: flex;
+  justify-content: center;
+  text-indent: -9999px;
+}
+
+.loan-logo span:first-child::before {
+  padding-bottom: 30px;
+  color: #fff;
+  font-size: 50px;
+  text-indent: 0;
+}
+
+.homeloan::before { content: "\f015"; }
+.carloan::before { content: "\f1b9"; }
+.educationloan::before { content: "\f19d"; }
+
+.loan-logo h4 { padding-bottom: 20px; }
+
+.loan-logo span:last-child {
+  display: block;
+  color: #33cbd3;
+  font-size: 30px;
+}
+
+.loan-info::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  top: 45%;
+  right: 0;
+  height: 1px;
+  margin: 0 auto;
+  background-color: #33D4D6;
+}
+/* loans styling ends here */
+
+/* why styling starts  here */
+.whyus { padding: 50px 0 100px 0; }
+
+.whyus .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.whyus-content { flex-basis: 40%; }
+.whyus figure { flex-basis: 50%; }
+
+.whyus-content h3 { 
+  padding-bottom: 30px;
+  font-size: 45px; 
+}
+
+.whyus-content p { 
+  padding-bottom: 20px;
+  color: #7d8593;
+  font-size: 17px;
+  line-height: 1.7;
+ }
+
+ .whyus-features {
+  padding-bottom: 30px;
+  font-size: 17px;
+  line-height: 2;
+ }
+
+ .whyus-features li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.whyus-features li::before { 
+  font-family: "FontAwesome";
+  content: "\f111";
+  color: #0a8cff;
+  font-size: 10px;
+  text-indent: 0;
+}
+
+/* why styling ends  here */
+
+/* howworks styling starts here */
+.howworks { background-color: #f5fbff; }
+
+.howworks .wrapper { 
+  padding-top: 100px;
+  padding-bottom: 50px;
+  text-align: center; 
+}
+
+.howworks { padding: 100px 0; }
+
+.howworks h3::before {
+  position: absolute;
+  content: "";
+  width: 5%;
+  right: 47%;
+  top: -20%;
+  height: 3px;
+  margin: 0 auto;
+  background-color: #33D4D6;
+}
+
+.howworks h3 { 
+  position: relative;
+  padding-bottom: 20px;
+  font-size: 45px; 
+}
+
+.howworks p { 
+  color: #808fa0;
+  font-size: 16px;
+  line-height: 1.7;
+ }
+
+.application-process {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.application-process li {
+  flex-basis: 29%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 80px;
+}
+
+.application-process h4 { font-size: 23px; }
+
+.application-process li span{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-color: #dff0ff;
+  color: #076fcb;
+  font-size: 17px;
+  font-weight: 600;
+}
+/* howworks styling ends here */
+
+/* frequentlyask styling starts here */
+.frequentlyask {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.frequentlyask-content h3 { 
+  padding-bottom: 30px;
+  font-size: 45px; 
+}
+
+.uparrow {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  border-bottom: 1px solid #dfdfdf;
+  outline: none;
+  text-align: left;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+  }
+  
+  .uparrow::before {
+    display: inline-block;
+    padding-right: 10px;
+    font-family: "fontawesome";
+    content: "\3c";
+    color: #707188;
+    rotate: 90deg;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  
+  .uparrow.is-open::before { content: "\3e"; }
+  
+  .accordion-content {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+  }
+
+  .accordion-content p {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #dfdfdf;
+    color: #7d8593;
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .accordion { width: 85%; }
+  .frequentlyask-content { flex-basis: 48%; }
+/* frequentlyask styling starts here */
+
+
+/* company experience */
+.company-experience { margin: 100px auto;
+padding: 100px 0; }
+/* experience-section styling starts here */
+.experience-section, .company-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.experience-section figure { position: relative; }
+
+.experience-section figure::after {
+  position: absolute;
+  bottom: 5%;
+  right: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-family: "FontAwesome";
+  content: "\f10d";
+  background-color: #33d4d6;
+  color: #fff;
+  text-indent: 0;
+}
+.experience-section img { border-radius: 50%; }
+
+.experience-content { flex-basis: 60%; }
+
+.experience-content p {
+  padding-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.experience-content span { color: #7d8593; }
+
+.company-logos {
+  padding-top: 100px;
+}
+
+.arrows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.arrows span { 
+  font-family: "FontAwesome";
+  display: flex;
+  text-indent: -9999px;
+}
+
+.arrows span::before {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-color: #dff0ff;
+  color: #076fcb;
+  font-size: 17px;
+  text-indent: 0;
+  transition: all 0.3s;
+}
+
+.left::before { content: "\3c"; }
+.right::before{ content: "\3e"; }
+/* experience-section styling ends here */
+/* company experience styling ends here*/
+
+/* applyforloan styling starts here*/
+.applyforloan { position: relative ;}
+
+.applyforloan-content {
+  position: absolute;
+  bottom: 35%;
+  left: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.applyforloan-content h3 {
+  flex-basis: 70%;
+  color: #fff;
+  font-size: 40px;
+}
+
+/* applyforloan styling ends here*/
 /*=================================
   main styling ends here
 =================================*/
@@ -121,12 +725,372 @@ li {
 /*=================================
   footer styling starts here
 =================================*/ 
+footer {
+  height: 50%;
+  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
 
+.contacts li, 
+.contacts li a ,
+.service-list li a,
+.contact-details p {
+  color: #828A92;
+  font-size: 13px;
+  transition: all 0.3s;
+}
+
+.contacts li a ,
+.service-list li a { border: 1px solid transparent; }
+.contacts li a:hover ,
+.service-list li a:hover { border-bottom: 1px solid #828A92; }
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 17px;
+}
+
+.contacts li a,
+.contacts address { font-size: 15px; }
+
+.contact-details,
+.footersocial-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footersocial-icons {
+  width: 50%;
+  align-items: center;
+}
+
+.contact-info { flex-basis: 30%; }
+
+.service-list,
+.contacts form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.esteem { padding-top: 25px; }
+
+.rights {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  color: #7d8593;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+footer h1,
+footer h4 { margin-bottom: 50px; } 
+
+footer h4 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.contact-details li:last-child { flex-basis: 30%; }
+.email-id { position: relative; }
+
+#email {
+  width: 90%;
+  padding: 15px;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+}
+
+#email::placeholder {
+  font-size: 14px;
+}
+
+.subscribe { 
+  position: absolute;
+  bottom: 12%;
+  right: 2%;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: #0a8cff;
+  color: #fff;
+  font-size: 12px;
+  transition: all 0.3s;
+}
+
+.subscribe:hover { 
+  border: 1px solid #0a8cff;
+  background-color: transparent;
+  color: #0a8cff;
+}
+
+.footersocial-icons { padding-top: 20px; }
+
+.footersocial { 
+  font-family: "FontAwesome";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-indent: -9999px;
+}
+
+.footersocial::before {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  border: 2px solid #f4f4f4;
+  border-radius: 50%;
+  color: #e8e8e8;
+  font-size: 15px;
+  text-indent: 0;
+  transition: all 0.3s;
+}
+
+.twitter::before { content: "\f099";}
+.facebook::before { content: "\f09a";}
+.instagram::before { content: "\f16d";}
+.googleplus::before { content: "\f0d5";}
+
+.footersocial:hover::before { color: #828A92; }
+
+footer h1 a { 
+  color: #000; 
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.heartlogo {
+  font-family: "FontAwesome";
+  display: flex;
+  text-indent: -9999px;
+}
+
+.heartlogo::before { 
+  padding: 0 5px;
+  content: "\f004";
+  font-size: 15px;
+  text-indent: 0;
+}
+
+.colorlib { 
+  padding: 0 5px;
+  color: #1190ff; 
+}
  /*=================================
   footer styling ends here
 =================================*/ 
 
 /*media query starts*/
 /*media query for 995px starts here*/
+/* media queries starts*/
+@media only screen and (max-width: 1280px) {
+  .head-nav { flex-basis: 37%; }
+  .banner-heading h2 { font-size: 50px; }
+  .loan-info { flex-basis: 24%; }
+  .loan-list li { font-size: 14px; }
+  .whyus-features li { font-size: 15px; }
+  .accordion { width: 100%; }
+  .frequentlyask-content { flex-basis: 60%; }
+}
+
+@media only screen and (max-width: 1024px) {
+  .banner-content { bottom: 17%; }
+  .loan-list li { font-size: 13px; }
+  .whyus-content h3 { font-size: 40px; }
+  .whyus-features li { font-size: 14px; }
+  .frequentlyask-content { flex-basis: 61%; }
+  .uparrow { font-size: 15px; }
+}
+
 @media only screen and (max-width: 995px) {
-}  
+  .nav-menu li a:hover,
+  .call:hover,
+  .btn:hover,
+  .applyloan:hover,
+  .uparrow,
+  .subscribe,
+  .contacts li a:hover, 
+  .service-list li a:hover,
+  .footersocial:hover::before,
+  h1 a ,
+  .hamburger { cursor: none; }
+
+  .nav-menu li a:hover { border-bottom: 1px solid transparent;}
+
+  .btn:hover {
+    border: 1px solid transparent;
+    background-color: #33d4d6;
+    color: #fff; 
+  }
+
+  .subscribe:hover {
+    border: 1px solid transparent;
+    background-color: #0a8cff;
+    color: #fff;
+  }
+
+  .contacts li a:hover, .service-list li a:hover { border-bottom: 1px solid transparent; }
+  .footersocial:hover::before { color: #e8e8e8; }
+  .banner-heading h2 { font-size: 40px; }
+  .banner-content form {
+    padding: 30px;
+    font-size: 14px;
+  }
+
+  .loan-info { padding: 30px; }
+  .loan-list li { font-size: 12px; }
+  .btn { padding: 12px 15px; }
+  .frequentlyask-content { flex-basis: 66%; }
+}
+
+@media only screen and (max-width: 768px) {
+  .head-nav { order: 3; }
+  .dropdown-content { display: none; }
+
+  .hamburger {
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  right: 1rem;
+  padding: 4px;
+  background: #33d4d6;
+  border-color: transparent;
+  cursor: pointer;
+  display: block;
+  }
+   
+  .material-icons { color: #fff; }
+  .closeIcon { display: none; }
+
+  .nav-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+  z-index: 99;
+  background: #33d4d6;
+  color: #fff;
+  list-style: none;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  }
+
+  .showMenu { transform: translateY(0); }
+   
+ .dropbtn::after { display: none; }
+ .line { display: none; }
+  header h1 { flex-basis: 25%; }
+  header .contact-details { flex-basis: 35%; }
+  .banner-content { bottom: 5%; }
+  form h3, form p, form span, .pay { padding-bottom: 15px; }
+  form h3 { font-size: 25px; }
+  form p { font-size: 14px; }
+  .banner-heading h2 { font-size: 25px; }
+  .banner-content form { padding: 20px; }
+  .amount, .month {
+    width: 85%;
+    margin: 0 auto; 
+  }
+
+  .amount input, .month input {
+    width: 90%;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+.btn { 
+  padding: 10px;
+  font-size: 12px;
+ }
+
+.loan-info { flex-basis: 50% }
+
+.loans {
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.whyus .wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.whyus figure {
+  flex-basis: 80%;
+  order: 2;
+}
+
+.whyus-content {
+  flex-basis: 80%;
+  order: 1;
+}
+
+.whyus { padding-top: 20px; }
+
+.frequentlyask { 
+  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.frequentlyask figure { order: 2; }
+.frequentlyask-content { padding-bottom: 20px; }
+
+.experience-section { 
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 10px;
+}
+
+.experience-content p { font-size: 13px; }
+.arrows { flex-direction: row; }
+.company-experience { padding: 0; }
+
+.company-logos {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.applyforloan-content h3 { font-size: 25px; }
+
+.contact-details li { 
+  padding-top: 10px;
+  flex-basis: 50%;
+}
+.contact-details {  
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.contact-details li:last-child { flex-basis: 50%; }
+footer h1, footer h4 { margin-bottom: 20px; }
+
+.application-process {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.application-process li {
+  flex-basis: 55%;
+  padding-top: 40px;
+}
+
+.howworks .wrapper { padding-top: 0; }
+}
